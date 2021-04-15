@@ -7,27 +7,25 @@
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".MainActivity">
-
     <TextView
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/text1"
+        android:textColor="@color/black"
         android:textSize="20sp"/>
-
-    <CheckBox
-        android:id="@+id/checkbox_start"
+    <Switch
+        android:id="@+id/switch_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check1"/>
-
     <LinearLayout
         android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_marginTop="20dp"
         android:visibility="invisible"
-        >
-
+        android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,34 +34,34 @@
         <RadioGroup
             android:id="@+id/rg"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
             <RadioButton
                 android:id="@+id/radio_dog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@string/radio_dog"/>
+                android:text="@string/radio_dog"/>
             <RadioButton
                 android:id="@+id/radio_cat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@string/radio_cat"/>
+                android:text="@string/radio_cat"/>
             <RadioButton
                 android:id="@+id/radio_rabbit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@string/radio_rabbit"/>
-    <Button
-        android:id="@+id/btn_done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_done"/>
-    <ImageView
-        android:id="@+id/imgv"
-        android:layout_width="400dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="20dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/bibi"/>
+                android:text="@string/radio_rabbit"/>
+        </RadioGroup>
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_done"/>
+        <ImageView
+            android:id="@+id/imgv"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bibi"/>
     </LinearLayout>
-
 </LinearLayout>
