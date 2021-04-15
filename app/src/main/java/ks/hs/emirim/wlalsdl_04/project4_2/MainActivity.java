@@ -25,11 +25,30 @@ public class MainActivity extends AppCompatActivity {
         linear = findViewById(R.id.linear);
         rg = findViewById(R.id.rg);
         imgv = findViewById(R.id.imgv);
+        Button btnFinish = findViewById(R.id.btn_finish);
+        Button btnfirst = findViewById(R.id.btn_first);
 
 
+        btnFinish.setOnClickListener(btnListener);
+        btnfirst.setOnClickListener(btnListener);
         switchStart.setOnCheckedChangeListener(checkListener);
         rg.setOnCheckedChangeListener(rgListener);
     }
+
+    View.OnClickListener btnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case R.id.btn_finish:
+                    break;
+                case R.id.btn_first:
+                    linear.setVisibility(View.INVISIBLE);
+                    switchStart.setChecked(false);
+                    break;
+            }
+        }
+    };
+
     CompoundButton.OnCheckedChangeListener checkListener = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
